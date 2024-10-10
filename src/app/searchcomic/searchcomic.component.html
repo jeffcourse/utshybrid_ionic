@@ -1,0 +1,8 @@
+<ion-item>
+  <ion-item><ion-label position='floating' style="color:black;">Search Comic</ion-label>
+    <ion-input type='text' style="width: 450px; color:black;" placeholder="Input Keyword" [(ngModel)]="txtsearch"></ion-input></ion-item>
+  <ion-button slot="end" style="width: 100px; height:30px; font-size:14px; --background: blue;" (click)="comicSearch()">Search</ion-button>
+</ion-item><br>
+<ion-list *ngFor="let sd of searchdata">
+  <ion-item class="title" style="color:black;" routerLink='/readcomic/{{sd.id_komik}}'>{{sd.judul}}</ion-item>
+</ion-list><br><br><br><br>

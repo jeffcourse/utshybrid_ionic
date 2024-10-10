@@ -1,0 +1,14 @@
+<ion-grid>
+  <ion-row>
+    <ion-col size="6" *ngFor="let cl of comics">
+      <ion-card>
+        <ion-card-content>
+          <h4 style="font-size: 24px; color:black;"><b>{{cl.judul}}</b></h4><br>
+          <ion-img src="{{cl.url_poster}}" routerLink='/readcomic/{{cl.id_komik}}'>
+          </ion-img><br>
+          <p style="font-size:16px; color:black;">{{cl.sinopsis}}</p>
+        </ion-card-content>
+      </ion-card><br>
+    </ion-col>
+  </ion-row>
+</ion-grid><br><br>

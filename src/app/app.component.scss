@@ -1,0 +1,32 @@
+ion-toolbar{
+    --background:purple;
+    --color:white;
+}
+.main{
+    --background:url(https://i.ebayimg.com/images/g/Uu0AAOSwLxpdfJaW/s-l500.jpg);
+}
+.panel{
+    --background:purple;
+}
+.category,.favorite,.search{
+    --background:rgb(0, 193, 193);
+}
+ion-list{
+    background-color: rgb(0,193,193);
+}
+.like{
+    color:red;
+}
+.read{
+    color:rgb(152, 54, 54);
+}
+ion-icon{
+    color:black;
+}
+ion-card > ion-item > ion-input{
+    --background:rgb(0, 204, 204);
+    color: black;
+}
+ion-card > ion-item{
+    --background:rgb(0,204,204);
+}

@@ -1,0 +1,31 @@
+<ion-card *ngFor="let rc of readcomic">
+  <ion-card-content>
+    <ion-img src="{{rc.url_halaman}}">
+    </ion-img><br>
+  </ion-card-content>
+</ion-card><br>
+<ion-item>
+  <ion-label position='floating' style="font-size:24px;">Rating Score: {{totalrating}}</ion-label><br>
+  <ion-label position='floating' style="font-size:24px;">Rated By: {{countrating}} person(s)</ion-label><br><br><br>
+  <ion-item>
+    <ion-item><ion-label  position='floating'>Give Rating</ion-label>
+      <ion-input type='number' style="width:120px;" min="1" max="5" placeholder="Input Rating" [(ngModel)]="newrating"></ion-input></ion-item>
+    <ion-button slot="end" style="width: 100px; height:30px; font-size:14px;" (click)="sendRating()">Submit</ion-button>
+  </ion-item><br>
+  <ion-item>
+    <ion-item slot="start"><ion-icon class="icon1" name="thumbs-up" (click)="favorite()"></ion-icon>&nbsp;&nbsp;<ion-label>Add to Favorite</ion-label></ion-item>
+    <ion-item slot="end"><ion-icon class="icon2" name="thumbs-down" (click)="unfavorite()"></ion-icon>&nbsp;&nbsp;<ion-label>Remove from Favorite</ion-label></ion-item>
+  </ion-item><br>
+  <ion-item>
+    <ion-item><ion-label  position='floating'>Give Comment</ion-label>
+      <ion-input type='text' style="width: 450px;" placeholder="Input Comment" [(ngModel)]="comment"></ion-input></ion-item>
+    <ion-button slot="end" style="width: 100px; height:30px; font-size:14px;" (click)="commentInput()">Submit</ion-button>
+  </ion-item><br>
+</ion-item><br>
+<ion-item>
+  <ion-label position="stacked" style="font-size:24px;">Comments: {{commentNum}}</ion-label><br><br>
+  <ion-textarea [readonly]="true" [autoGrow]="true" *ngFor="let cmt of detailcomment">
+    <span>&nbsp;&nbsp;{{cmt.user_name}}: {{cmt.komentar}}</span>
+  </ion-textarea>
+</ion-item><br><br><br><br>
+
